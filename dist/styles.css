@@ -1,0 +1,180 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    min-height: 100%;
+    font-family: Montserrat, sans-serif; /* Montserrat   Raleway*/
+}
+
+#navBar {
+    padding-top: 25px;
+    background-color: black;
+    min-height: 100%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#socialsButtonsDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+#socialsButtonsDiv a{
+    padding: 5px;
+}
+
+#email {
+    display: flex;
+    align-items: center;
+}
+
+#tabsDiv {
+    text-align: left;
+    width: 100%;
+    font-size: larger;
+    padding-left: 20px;
+}
+
+#tabsDiv ul {
+    margin-top: 0px;
+    padding: 10px;
+}
+
+#tabsDiv li {
+    padding: 5px;
+}
+
+#mainZone{
+    min-width: 85%;
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+#home {
+    background-color: antiquewhite;
+    min-height: 100%;
+    align-content: center;
+    padding-left: 50px;
+}
+
+#aboutMe {
+    background-color: brown;
+    min-height: 100%;
+    padding-left: 50px;
+}
+
+/* #educationDiv {
+    padding-left: 30px;
+
+}
+
+.education {
+    border-left: solid rgb(31, 146, 146) 2px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+} */
+
+#projects {
+    background-color: rgb(153, 104, 153);
+    min-height: 94.5%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#projectsDiv {
+    /*border: solid black 3px;*/
+    padding-top: 10px;
+    min-height: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project {
+    width: 20%;
+    min-height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.project:hover {
+    border: solid black 3px;
+    cursor: pointer;
+}
+
+#projectsTab button {
+    cursor: pointer;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+#educationDiv.timeline {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 40px; /* Space for the timeline line and markers */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px; /* Centered alignment for the timeline line */
+    width: 4px;
+    height: 100%;
+    background: white;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.timeline-marker {
+    position: absolute;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid white;
+    background-color: white;
+    transform: translateY(8px); /* Adjust to center vertically with the content */
+    transform: translateX(-29px);
+}
+
+.timeline-content {
+    padding: 10px 15px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.timeline-content h3 {
+    margin: 0 0 5px;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: #555;
+}
