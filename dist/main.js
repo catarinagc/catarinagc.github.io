@@ -1,17 +1,18 @@
 import * as THREE from 'three';
 
+var container = document.getElementById( 'home' );
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.6, 1200);
+const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.6, 1200);
 const renderer = new THREE.WebGLRenderer();
 
 renderer.setClearColor("#233143");
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+
+renderer.setSize(container.clientWidth, container.clientHeight);
+container.appendChild(renderer.domElement);
 
 window.addEventListener('resize', () => {
-    console.log("here")
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    camera.aspect = window.innerWidth / window.innerHeight;
+    renderer.setSize( container.clientWidth, container.clientHeight);
+    camera.aspect = container.clientWidth / container.clientHeight;
     camera.updateProjectionMatrix();
 })
 
