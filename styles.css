@@ -50,20 +50,26 @@ body {
     padding: 5px;
 }
 
-#mainZone{
-    min-width: 85%;
-    padding: 0;
-    min-height: 100%;
+#mainZone {
+    width: 85%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
 }
 
 #home {
-    background-color: antiquewhite;
+    flex: 1; /* Allow it to take up remaining space */
     min-height: 100%;
-    align-content: center;
-    padding-left: 50px;
+    max-height: 100%;
+    position: relative;
+}
+
+#homeText{
+    position: absolute;
+    top: 45%;
+    z-index: 10;
+    padding-left: 20px;
 }
 
 #aboutMe {
@@ -71,19 +77,6 @@ body {
     min-height: 100%;
     padding-left: 50px;
 }
-
-/* #educationDiv {
-    padding-left: 30px;
-
-}
-
-.education {
-    border-left: solid rgb(31, 146, 146) 2px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-} */
 
 #projects {
     background-color: rgb(153, 104, 153);
@@ -93,7 +86,6 @@ body {
 }
 
 #projectsDiv {
-    /*border: solid black 3px;*/
     padding-top: 10px;
     min-height: 50%;
     display: flex;
