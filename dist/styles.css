@@ -19,6 +19,7 @@ body {
     flex-direction: column;
     align-items: center;
     border-right: solid 2px white;
+    padding-right: 10px;
 }
 
 #socialsButtonsDiv {
@@ -88,7 +89,8 @@ body {
 
 #projectsDiv {
     padding-top: 10px;
-    min-height: 50%;
+    /* width: 10%; */
+    height: 30%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -96,8 +98,8 @@ body {
 }
 
 .project {
-    width: 20%;
-    min-height: 70%;
+    width: 25%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
