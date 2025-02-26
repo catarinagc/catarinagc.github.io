@@ -63,43 +63,66 @@
             <br>I'm passionate about programming and love working on projects, building games, and participating in game jams.
             <br>Oustide of coding, I enjoy surfing, playing volleyball, and taking drum lessons.
             <br>I'm always excited to learn new things and bring creative ideas to life through code and design.</p>
-            <h2>Education</h2>
-            <div id="educationDiv" class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Master's in Computer Science and Engineering</h3>
-                        <p>2024-Now</p>
-                        <p>Currently in my first year of the CS Master's course from Instituto Superior Técnico</p>
-                        <p>Specializing in Games and Interaction/Visualization.</p>
-                        <p></p>
+            <div style="display: flex; flex-direction: column;">
+                <div style="display: flex; flex-direction: row; align-items: flex-start;">
+                    <div style="display: flex; flex-direction: column;">
+                        <h2>Education</h2>
+                        <div id="educationDiv" class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h3>Master's in Computer Science and Engineering</h3>
+                                    <p>2024-Now</p>
+                                    <p>Currently in my first year of the CS Master's course from Instituto Superior Técnico</p>
+                                    <p>Specializing in Games and Interaction/Visualization.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h3>Bachelor's in Computer Science</h3>
+                                    <p>2021-2024</p>
+                                    <p>Graduated from NOVA Faculdade de Ciência e Tecnologia with a final grade of 15/20</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding-left: 10%;">
+                        <h2>Extracurricular Activities</h2>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Bachelor's in Computer Science</h3>
-                        <p>2021-2024</p>
-                        <p>Graduated from NOVA Faculdade de Ciência e Tecnologia with a final grade of 15/20</p>
+                <div style="display: flex; flex-direction: row; align-items: flex-start;">
+                    <div style="display: flex; flex-direction: column;">
+                        <h2>Languages</h2>
+                        <div style="display: flex; flex-direction: row;">
+                            <h3>Portuguese</h3>
+                            <h3 style="padding-left: 50px;">English</h3>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; padding-left: 10%; ">
+                        <h2>Programming Languages</h2>
+                        <h3>Java | Python | C++ | C# | JavaScript</h3>
+                        <h2>Tools/Software</h2>
+                        <h3>Godot | OpenGL | Unity | Git | Visual Studio</h3>
                     </div>
                 </div>
             </div>
         </div>
         <div id="projects">
-            <h1>Projects</h1>
-            <div id="projectsTab">
-                <button onclick="projButtonOnClick(this)" id="all">All</button>
-                <button onclick="projButtonOnClick(this)" id="game">Games</button>
-                <button onclick="projButtonOnClick(this)" id="graphics">Computer Graphics</button>
-                <button onclick="projButtonOnClick(this)" id="other">Others</button>
+            <div style="display: flex; flex-direction: row;">
+                <h1>Projects</h1>
+                <div id="projectsTab">
+                    <button onclick="projButtonOnClick(this)" id="all" class="active-tab">All Projects</button>
+                    <button onclick="projButtonOnClick(this)" id="game">Games</button>
+                    <button onclick="projButtonOnClick(this)" id="graphics">Computer Graphics</button>
+                    <button onclick="projButtonOnClick(this)" id="other">Others</button>
+                </div>
             </div>
             <div id="projectsDiv">
                 <div class="project other">
-                    <img>
+                    <img src="/dist/img/images.jpg">
                     <h3>TravelGreen</h3>
                     <p>As a final project for my Bachelor's degree we were tasked with creating an app and website for an application that tried to help with an </p>
-                    <h3>Travel Green</h3>
-                    <p>bfiquwhfdqhwfq</p>
                 </div>
                 <div class="project graphics">
                     <h3>Stylized Water Simulation</h3>
