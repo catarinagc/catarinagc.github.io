@@ -1,6 +1,7 @@
 :root {
-    --highlight-color : #7A3097;
-    --background-color : #EFE7DA;
+    --highlight-color: #7A3097;
+    --background-color: #F3ECE2;
+    --text-color: #333;
 }
 
 html {
@@ -8,7 +9,8 @@ html {
 }
 
 h1, h2 {
-   color: var(--highlight-color);
+    color: var(--highlight-color);
+    font-weight: 700;
 }
 
 body {
@@ -27,8 +29,28 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border-right: solid 2px white; */
     padding-right: 10px;
+}
+
+/* #navBar {
+    background-color: black;
+    padding-top: 25px;
+    min-height: 100%;
+    width: 13%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 10px;
+} */
+
+#navBar a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+#navBar a:hover {
+    color: #d9b3e6;
 }
 
 #socialsButtonsDiv {
@@ -49,7 +71,7 @@ body {
     text-align: left;
     width: 100%;
     font-size: larger;
-    padding-left: 20px;
+    padding-left: 23px;
 }
 
 #tabsDiv ul {
@@ -81,20 +103,27 @@ body {
     top: 45%;
     z-index: 10;
     padding-left: 20px;
+    /* background: rgba(255, 255, 255, 0.1);  */
+    background: black;
+    /* backdrop-filter: blur(20px); */
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--highlight-color);
 }
 
 #aboutMe {
-    background-color: #EFE7DA;
+    /* background-color: #EFE7DA; */
+    background-color: #F8F1E7;
     min-height: 100%;
     padding-left: 50px;
 }
 
 #projects {
-    background-color: var(--background-color);
+    background-color: #F5EAD7;
     min-height: 94.5%;
     padding-left: 50px;
     padding-right: 50px;
-    border-top: solid 3px black;
+    /* border-top: solid 3px black; */
 }
 
 #projectsDiv {
@@ -106,7 +135,7 @@ body {
     gap: 10px;
 }
 
-.project {
+/* .project {
     flex-direction: column;
     align-items: center;
     width: 32%;
@@ -116,15 +145,28 @@ body {
     border: solid 3px var(--highlight-color);
     border-radius: 6px;
     text-align: left;
+} */
+
+.project {
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    border: solid 3px var(--highlight-color);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
 }
 
 .project p {
     padding-left: 10px;
 }
 
+
 .project:hover {
-    border: solid black 3px;
-    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 #projectsTab {
