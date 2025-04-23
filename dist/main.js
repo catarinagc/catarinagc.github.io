@@ -33,6 +33,41 @@ const depth = 250; // Absolute value of the Z position
 const visibleHeight = 2 * Math.tan(fov / 2) * depth;
 const visibleWidth = visibleHeight * camera.aspect;
 
+const mouse = new THREE.Vector2();
+var isMoving = false;
+
+window.addEventListener('mousemove', (event) => {
+    isMoving = true;
+    const rect = container.getBoundingClientRect(); // Get container position and size
+
+    // Check if the mouse is inside the container
+    if (
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom
+    ) {
+        // Convert mouse position to normalized device coordinates (-1 to 1)
+        mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+        mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+    } else {
+        // If outside, set mouse to a value that won't affect objects
+        mouse.x = -1000;
+        mouse.y = -1000;
+    }
+});
+
+function getMousePositionInWorld() {
+    const worldPosition = new THREE.Vector3(mouse.x, mouse.y, 0.5);
+    worldPosition.unproject(camera);
+
+    const dir = worldPosition.clone().sub(camera.position).normalize();
+    const distance = (-depth - camera.position.z) / dir.z;
+    worldPosition.add(dir.multiplyScalar(distance));
+
+    return worldPosition;
+}
+
 var circle;
 let circles = [];
 for (var i = 0; i< 1500; i++) {
@@ -48,32 +83,33 @@ camera.position.z = 5;
 
 let mouseX = 0, mouseY = 0;
 
-window.addEventListener("mousemove", (event) => {
-    mouseX = (event.clientX / width) * visibleWidth - visibleWidth / 2;
-    mouseY = -(event.clientY / height) * visibleHeight + visibleHeight / 2;
-});
-
 function animate() {
-    let range = 50; // Define interaction radius
+    mouseX = getMousePositionInWorld().x;
+    mouseY = getMousePositionInWorld().y;
+
+    let range = 25; // Define interaction radius
 
     circles.forEach(({ mesh, originalX, originalY }) => {
-        let offsetX = (mouseX - originalX) * 0.1; // Small displacement
+        let offsetX = (mouseX - originalX) *  0.1; // Small displacement
         let offsetY = (mouseY - originalY) * 0.1;
 
         // Check if circle is within range of the actual mouse position
         if (originalX >= mouseX - range && originalX <= mouseX + range &&
-            originalY >= mouseY - range && originalY <= mouseY + range) {
-            
+            originalY >= mouseY - range && originalY <= mouseY + range && isMoving) {
+
             // Move circles slightly in response to the mouse
             mesh.position.x += offsetX;
             mesh.position.y += offsetY;
         } else {
-            // Smoothly return circles to their original position
-            mesh.position.x += (originalX - mesh.position.x) * 0.05;
-            mesh.position.y += (originalY - mesh.position.y) * 0.05;
+            //if ( mesh.position.x != originalX && mesh.position.y != originalY){
+                // Smoothly return circles to their original position
+                mesh.position.x += (originalX - mesh.position.x) * 0.05;
+                mesh.position.y += (originalY - mesh.position.y) * 0.05;
+          //  }
         }
     });
 
+    isMoving = false;
     renderer.render(scene, camera);
 }
 

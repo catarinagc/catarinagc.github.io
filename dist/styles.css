@@ -5,7 +5,8 @@
 }
 
 html {
-    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
 }
 
 h1, h2 {
@@ -29,19 +30,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-right: 10px;
+    /* padding-right: 10px; */
 }
-
-/* #navBar {
-    background-color: black;
-    padding-top: 25px;
-    min-height: 100%;
-    width: 13%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-right: 10px;
-} */
 
 #navBar a {
     color: var(--highlight-color);
@@ -114,8 +104,10 @@ body {
 #aboutMe {
     /* background-color: #EFE7DA; */
     background-color: #F8F1E7;
-    min-height: 100%;
     padding-left: 50px;
+    min-height: 100%;
+    max-height: 100%;
+    /* height: 100%; */
 }
 
 #projects {
@@ -123,7 +115,8 @@ body {
     min-height: 94.5%;
     padding-left: 50px;
     padding-right: 50px;
-    /* border-top: solid 3px black; */
+    min-height: 94%;
+    max-height: 94%;
 }
 
 #projectsDiv {
@@ -135,17 +128,17 @@ body {
     gap: 10px;
 }
 
-/* .project {
-    flex-direction: column;
-    align-items: center;
-    width: 32%;
-    height: 100%;
-    display: flex;
-    background-color: aliceblue;
-    border: solid 3px var(--highlight-color);
-    border-radius: 6px;
-    text-align: left;
-} */
+#projectsDiv img{
+    width: 50%;
+}
+
+#projectsDiv h3{
+    margin-bottom: 5px;
+}
+
+#projectsDiv p{
+    margin-top: 0px;
+}
 
 .project {
     width: 30%;
@@ -167,6 +160,7 @@ body {
 .project:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
 
 #projectsTab {
@@ -192,8 +186,11 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-content: center;
     background-color: black;
     color: white;
+    min-height: 6%;
+    max-height: 6%;
 }
 
 #educationDiv.timeline {
@@ -246,4 +243,33 @@ body {
 .timeline-content p {
     margin: 0;
     color: #555;
+}
+
+ .timeline-content{
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    margin: 20px 0;
+}
+
+#last {
+    display: flex;
+    /* Distributes content evenly */
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-height: 30%;
+    min-height: 30%;
+    height: 30%;
+}
+
+#last h3, #last p {
+    /* word-wrap: break-word; */
+    margin: 0px;
+}
+
+#last img {
+    max-width: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
