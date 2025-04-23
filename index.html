@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catarina Costa</title>
-    <!-- <script src="scripts.js"></script> -->
-    <!-- <script src="main.js"></script> -->
+    <script src="scripts.js"></script>
+    <script src="main.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!--Get your own code at fontawesome.com-->
     <script type="importmap">
         {
           "imports": {
@@ -20,21 +19,21 @@
 <body>
     <script type="module" src="./main.js"></script>
     <div id="navBar">
-        <img src="img/profile_foto.jfif" style="height: 170px; border-radius: 50%;">
+        <img src="img/profile_foto.jfif" style="width: 70%; border-radius: 50%;">
         <h3 style="color: white; font-size: x-large; margin: 10px;">Catarina Costa</h3>
         <div id="socialsButtonsDiv">
-            <a href="https://www.linkedin.com/in/catarina-costa-0a6869226/">
+            <a href="https://www.linkedin.com/in/catarina-costa-0a6869226/" target="_blank">
                 <i class="fa-brands fa-linkedin" style="font-size:35px"></i>
             </a>
-            <a href="https://github.com/catarinagc">
+            <a href="https://github.com/catarinagc" target="_blank">
                 <i class="fa-brands fa-github" style="font-size:35px"></i>
             </a>
-            <a href="https://an1ratak.itch.io/">
+            <a href="https://an1ratak.itch.io/" target="_blank">
                 <i class="fa-brands fa-itch-io" style="font-size:35px"></i>
             </a>
         </div>
         <div id="email">
-            <i class="fa fa-envelope" style="font-size:20px; color: white; padding: 5px;"></i>
+            <!-- <i class="fa fa-envelope" style="font-size:20px; color: white; padding: 5px;"></i>  -->
             <p style="color: white;">catarinagcostaa@gmail.com</p>
         </div>
         <div id="tabsDiv">
@@ -44,70 +43,142 @@
                 <li><i class="fa fa-folder" style="font-size:20px; color: white; padding: 5px;"></i><a href="#projects">Projects</a></li>
             </ul>
         </div>
-        <a href="CV_CatarinaCosta.pdf" target="_blank">
-            <button style="height: 35px; width: 140px;">
-                Download CV
+        <a href="CV_CatarinaCosta.pdf" target="_blank" style="width: 75%; height: 5%; padding-bottom: 8px;">
+            <button style="height: 100%; width: 100%; border-radius: 5px; cursor: pointer;">
+                Download CV (Portuguese)
+            </button>
+        </a>
+        <a href="CV_CatarinaCosta.pdf" target="_blank" style="width: 75%; height: 5%;">
+            <button style="height: 100%; width: 100%;border-radius: 5px; cursor: pointer;">
+                Download CV (English)
             </button>
         </a>
     </div>
     <div id="mainZone">
         <div id="home">
             <div id="homeText">
-                <h1 style="color: rgb(0, 0, 0); font-weight: 700;">Catarina Costa</h1>
-                <h2>Computer Science Master's Student</h2>
+                <h1 style="font-size: 800; font-weight: 700; color: rgb(202, 155, 234)">Catarina Costa</h1>
+                <h2 style="color:rgb(202, 155, 234)">Computer Science and Engineering Master's Student</h2>
             </div>
         </div>
         <div id="aboutMe">
-            <h1>About me</h1>
-            <p>I'm a Computer Science Master's student at IST specializing in Game Development and Computer Graphics</p>
-            <h2>Education</h2>
-            <div id="educationDiv" class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Master's in Computer Science and Engineering</h3>
-                        <p>2024-Now</p>
-                        <p>Currently on my first year of the CS Master's course from Instituto Superior Técnico</p>
-                        <p>Specializing in Games and Interaction/Visualization.</p>
+            <div style="display: flex; flex-direction: column; height: 20%; padding-bottom: 20px;">
+                <h1 style="margin-bottom: 0px;">About me</h1>
+                <p style="font-size: large;">I'm a first-year Computer Science and Engeneering Master's student at IST, specializing in Game Development and Computer Graphics. 
+                <br>I'm passionate about programming and love working on projects, building games, and participating in game jams.
+                <br>Oustide of coding, I enjoy surfing, volleyball, and playing drums.
+                <br>I'm always excited to learn new things and bring creative ideas to life with programming.</p>
+            </div>
+            <div style="display: flex; flex-direction: column; height: 50%; padding-bottom: 10px;">
+                <div style="display: flex; flex-direction: row; align-items: flex-start; width: 100%;">
+                    <div style="display: flex; flex-direction: column; width: 50%;">
+                        <h2 style="margin-bottom: 0px;">Education</h2>
+                        <div id="educationDiv">
+                            <div >
+                                <!-- <div class="timeline-marker"></div> -->
+                                <div class="timeline-content">
+                                    <h3>Master's in Computer Science and Engineering</h3>
+                                    <p>2024-Now</p>
+                                    <p>Currently in my first year of the CS Master's course from Instituto Superior Técnico</p>
+                                    <p>Specializing in Games and Interaction/Visualization.</p>
+                                </div>
+                                <!-- <div class="timeline-marker"></div> -->
+                                <div class="timeline-content">
+                                    <h3>Bachelor's in Computer Science</h3>
+                                    <p>2021-2024</p>
+                                    <p>Graduated from NOVA Faculdade de Ciência e Tecnologia with a final grade of 15/20</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column;">
+                        <h2 style="margin-bottom: 0px;">Extracurricular Activities</h2>
+                        <div id="extracurricularDiv">
+                            <div>
+                                <div class="timeline-content">
+                                    <h3>HackerSchool</h3>
+                                    <p>2024-Now</p>
+                                    <p>Member</p>
+                                    <p>An academic group from IST that focus on developing projects on a multidisciplinar environment</p>
+                                    <p>Part of the website development team</p>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3>GameDev Técnico</h3>
+                                    <p>2024-Now</p>
+                                    <p>Newbie</p>
+                                    <p>An academic group from IST that focus on game development, with members from the different disciplines needed for game development</p>
+                                    <p>I participate on game jams and am a programmer in a long-term project: The Escape</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Bachelor's in Computer Science</h3>
-                        <p>2021-2024</p>
-                        <p>Graduated from NOVA Faculdade de Ciência e Tecnologia with a grade of 15/20</p>
+            </div>
+            <div id="last">
+                <div style="display: flex; flex-direction: column; height: auto; width: 40%;">
+                    <h2>Programming Languages</h2>
+                    <h3>Java | Python | C++ | GLSL | JavaScript</h3>
+                    <h2>Tools/Software</h2>
+                    <h3>Godot | OpenGL | Unity | Git | Visual Studio</h3>
+                </div>
+                <div style="display: flex; flex-direction: column; width: 25%;">
+                    <h2>Languages</h2>
+                    <div style="display: flex; flex-direction: row;">
+                        <h3 style="margin-right: 10px;">Portuguese (Native) | English</h3>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; width: 30%;">
+                    <h2 style=" margin-bottom: 0px;">Hobbies</h2>
+                    <div style="display: flex; flex-direction: row;">
+                        <img src="img/console.png">
+                        <img src="img/man.png" style="height: 90%;">
+                        <img src="img/drums.png">
+                        <img src="img/voleyball.png" style="height: 90%;">
+                        <!-- <a href="https://www.flaticon.com/free-icons/joystick" title="joystick icons">Joystick icons created by Good Ware - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/surfing" title="surfing icons">Surfing icons created by Culmbio - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/surfing" title="surfing icons">Surfing icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/drums" title="drums icons">Drums icons created by Icongeek26 - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/voleyball" title="voleyball icons">Voleyball icons created by I Wayan Wika - Flaticon</a> -->
                     </div>
                 </div>
             </div>
         </div>
         <div id="projects">
-            <h1>Projects</h1>
-            <div id="projectsTab">
-                <button>Academic</button>
-                <button>Personal</button>
+            <div style="display: flex; flex-direction: row;">
+                <h1>Projects</h1>
+                <div id="projectsTab">
+                    <button onclick="projButtonOnClick(this)" id="all" class="active-tab">All Projects</button>
+                    <button onclick="projButtonOnClick(this)" id="game">Games</button>
+                    <button onclick="projButtonOnClick(this)" id="graphics">Computer Graphics</button>
+                    <button onclick="projButtonOnClick(this)" id="other">Others</button>
+                </div>
             </div>
             <div id="projectsDiv">
-                <div class="project">
-                    <img>
-                    <h3>Project1</h3>
-                    <p>bfiquwhfdqhwfq</p>
+                <div class="project other">
+                    <img src="/dist/img/images.jpg">
+                    <h3>TravelGreen</h3>
+                    <p>Final project for my Bachelor's degree, app and website made to help reduce the user's carbon footprint</p>
                 </div>
-                <div class="project">
-                    <h3>Project2</h3>
-                    <p>bfiquwhfdqhwfq</p>
+                <div class="project graphics">
+                    <img src="/dist/img/images.jpg">
+                    <h3>Stylized Water Simulation</h3>
+                    <p>Project for the Computer Graphics class in my Master's</p>
                 </div>
-                <div class="project">
-                    <h3>Project2</h3>
-                    <p>bfiquwhfdqhwfq</p>
+                <div class="project game">
+                    <img src="/dist/img/images.jpg">
+                    <h3>Roll The Credits</h3>
+                    <p>Project for my Game Design class in my Master's</p>
+                    <a href="" target="_blank">
+                        <button>Play the game</button>
+                    </a>
                 </div>
-                <div class="project">
-                    <h3>Project2</h3>
-                    <p>bfiquwhfdqhwfq</p>
-                </div>
-                <div class="project">
-                    <h3>Project2</h3>
-                    <p>bfiquwhfdqhwfq</p>
+                <div class="project game">
+                    <img src="/dist/img/images.jpg">
+                    <h3>Pop To The Right</h3>
+                    <p>Game made for the Global Game Jam 2025, theme: bubbles</p>
+                    <a href="https://mrdummyacc-dot.itch.io/pop-to-the-right" target="_blank">
+                        <button>Play the game</button>
+                    </a>
                 </div>
             </div>
         </div>
