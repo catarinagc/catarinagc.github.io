@@ -3,24 +3,26 @@ import * as THREE from 'three';
 var container2 = document.getElementById("mainZone");
 var container = document.getElementById( 'home' );
 const scene = new THREE.Scene();
-var width = container2.clientWidth;
-var height =  container2.clientHeight;
+var width = container.clientWidth;
+var height =  window.innerHeight;
 const camera = new THREE.PerspectiveCamera(75, width / height, 0.6, 1200);
 const renderer = new THREE.WebGLRenderer();
 
 // renderer.setClearColor("rgb(26, 26, 26)");
 renderer.setClearColor("rgb(0, 0, 0)");
-
 renderer.setSize(width, height);
 container.appendChild(renderer.domElement);
 
 window.addEventListener('resize', () => {
-    renderer.setSize(width, height);
+    width = container.clientWidth;
+    height = container.clientHeight;
+
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
+    renderer.setSize(width, height);
 })
 
-const geometry = new THREE.PlaneGeometry( 1, 1);
+//const geometry = new THREE.PlaneGeometry( 1, 1);
 const sphereGeometry = new THREE.CircleGeometry(1,100);
 const material1 = new THREE.MeshBasicMaterial( { color: "rgb(132, 92, 206)"} );
 const material2 = new THREE.MeshBasicMaterial( { color: "rgb(235, 234, 176)"} );
