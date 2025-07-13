@@ -20,6 +20,12 @@ p {
   white-space: normal;
 }
 
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.4rem; }
+p  { font-size: 1rem; line-height: 1.6; }
+
+
 canvas {
   height: 100vh;
   width: 100vw;
@@ -64,16 +70,12 @@ body {
     padding: 5px;
 }
 
-/* #email {
-    display: flex;
-    align-items: center;
-} */
-
 #tabsDiv {
     text-align: left;
     max-width: 100%;
     font-size: larger;
     padding-left: 23px;
+    margin-right: auto;
 }
 
 #tabsDiv ul {
@@ -119,6 +121,21 @@ body {
     color: var(--highlight-color);
     font-size: medium;
 }
+
+#home {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* background: url('your_background.jpg') no-repeat center center/cover; */
+}
+
+#homeText {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 12px;
+    /* text-align: center; */
+}
+
 
 #aboutMe {
     /* background-color: #EFE7DA; */
@@ -209,6 +226,8 @@ body {
 
 .project {
     max-width: 30%;
+    width:30%;
+    min-height: 30vh;
     background-color: white;
     border: solid 3px var(--highlight-color);
     border-radius: 10px;
@@ -228,6 +247,20 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 }
+
+/* .project {
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background: #fff;
+} */
+
+.project img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
 
 #projectsTab {
     align-self: center;
