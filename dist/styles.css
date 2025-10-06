@@ -88,24 +88,26 @@ body {
 }
 
 #mainZone {
-    max-width: 85vw;
-    width: 85vw;
-    max-height: 100%;
+    /* max-width: 85vw;
+    width: 85vw; */
+    /* max-height: 100%;
     min-height: 100%;
-    height: 100%;
+    height: 100%; */
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-}
+    /* margin-left: auto; */
+    margin-left: 15vw; /* same as navbar width */
+    width: calc(100vw - 15vw);
+    overflow-x: hidden;
 
+}
+/* 
 #home {
-   /* flex: 1; /* Allow it to take up remaining space */
     min-height: 100%;
     max-height: 100%;
     height: 100%;
     min-width: 100%;
     max-width: 100%;
-    /* position: relative; */
 }
 
 #homeText{
@@ -113,9 +115,7 @@ body {
     top: 45%;
     z-index: 10;
     margin-left: 2vw;
-    /* background: rgba(255, 255, 255, 0.1);  */
     background: rgb(0, 0, 0);
-    /* backdrop-filter: blur(20px); */
     padding: 5px;
     border-radius: 10px;
     color: var(--highlight-color);
@@ -124,18 +124,43 @@ body {
 
 #home {
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* background: url('your_background.jpg') no-repeat center center/cover; */
 }
 
 #homeText {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 12px;
-    /* text-align: center; */
-}
+} */
 
+#home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+/* 
+#home canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+#homeText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  color: var(--highlight-color);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 1000px;
+  z-index: 10;
+}
 
 #aboutMe {
     /* background-color: #EFE7DA; */
@@ -288,4 +313,118 @@ body {
     background-color: black;
     color: white;
     max-height: 6vh;
+}
+
+/* ---------- RESPONSIVE STYLES ---------- */
+
+/* For tablets and smaller laptops */
+@media (max-width: 1024px) {
+  /* #navBar {
+    max-width: 25vw;
+  }
+  #mainZone {
+    margin-left: 25vw;
+    width: calc(100% - 25vw);
+    overflow-x: hidden;
+  } */
+  #projectsDiv .project {
+    width: 45%;
+    max-width: 45%;
+  }
+}
+
+/* For mobile screens */
+/* @media (max-width: 768px) {
+  #navBar {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
+
+  #navBar img {
+    width: 20%;
+    max-width: 80px;
+  }
+
+  #tabsDiv ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #mainZone {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  #aboutMe,
+  #projects {
+    padding: 20px;
+  }
+
+  #projectsDiv {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #projectsDiv .project {
+    width: 90%;
+    max-width: 400px;
+  }
+} */
+
+
+/* ---------- NAVBAR RESPONSIVENESS ---------- */
+@media (max-width: 768px) {
+  #navBar {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+  }
+
+  #navBar img {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+  }
+
+  #tabsDiv ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 10px 0;
+  }
+
+  #tabsDiv li {
+    list-style: none;
+    margin: 0 8px;
+  }
+
+  #socialsButtonsDiv {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  #mainZone {
+    margin-left: 0;
+    margin: 0px;
+    width: 100%;
+    max-width: 100%;
+  }
 }
