@@ -12,3 +12,12 @@ function projButtonOnClick(buttonClicked){
             project.style -= "display:none"
     });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menuToggle");
+  const navBar = document.getElementById("navBar");
+
+  menuToggle.addEventListener("click", () => {
+    navBar.classList.toggle("active");
+  });
+});
