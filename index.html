@@ -18,6 +18,9 @@
 </head>
 <body>
     <script type="module" src="./main.js"></script>
+    <button id="menuToggle" class="hamburger">
+        <i class="fa fa-bars"></i>
+    </button>
     <div id="navBar">
         <img src="img/profile_foto.jfif" style="width: 70%; border-radius: 50%;">
         <h3 style="color: white; font-size: x-large; margin: 10px;">Catarina Costa</h3>
@@ -61,13 +64,13 @@
         <div id="aboutMe">
             <div style="display: flex; flex-direction: column;">
                 <h1 style="margin-bottom: 0px;">About me</h1>
-                <p style="font-size: large;">I'm a first-year Computer Science and Engeneering Master's student at IST, specializing in Game Development and Computer Graphics. 
+                <p style="font-size: large; padding-right: 10px;">I'm a second-year Computer Science and Engineering Master's student at IST, specializing in Game Development and Computer Graphics. 
                 I'm passionate about programming and love working on projects, building games, and participating in game jams.
                 Oustide of coding, I enjoy surfing, volleyball, and playing drums.
                 I'm always excited to learn new things and bring creative ideas to life with programming.</p>
             </div>
             <div style="display: flex; flex-direction: column;">
-                <div style="display: grid; grid-template-columns: 40% 60%;">
+                <div id="bio" style="display: grid; grid-template-columns: 40% 60%;">
                     <div style="display: flex; flex-direction: column;">
                         <h2 style="margin-bottom: 0px;">Education</h2>
                         <div id="educationDiv">
@@ -75,7 +78,7 @@
                                 <div class="timeline-content">
                                     <h3>Master's in Computer Science and Engineering</h3>
                                     <p>2024-Now</p>
-                                    <p>Currently in my first year of the CS Master's course from Instituto Superior Técnico</p>
+                                    <p>Currently in my second year of the CS Master's course from Instituto Superior Técnico</p>
                                     <p>Specializing in Games and Interaction/Visualization.</p>
                                 </div>
                                 <div class="timeline-content">
@@ -96,6 +99,7 @@
                                     <p>Member</p>
                                     <p>An academic group from IST that focus on developing projects on a multidisciplinar environment</p>
                                     <p>Part of the website development team</p>
+                                    <p>Part of the Marketing team</p>
                                 </div>
                                 <div class="timeline-content">
                                     <h3>GameDev Técnico</h3>
@@ -103,6 +107,7 @@
                                     <p>Newbie</p>
                                     <p>An academic group from IST that focuses on game development, with members from the different disciplines needed for game development</p>
                                     <p>I participate on game jams and am a programmer in a long-term project made in Unreal Engine: The Escape</p>
+                                    <p>Part of the infrastructure team</p>
                                 </div>
                             </div>
                         </div>
@@ -145,17 +150,17 @@
             </div>
             <div id="projectsDiv">
                 <div class="project other">
-                    <img src="/dist/img/images.jpg">
+                    <img src="img/images.jpg">
                     <h3>TravelGreen</h3>
                     <p>Final project for my Bachelor's degree, app and website made to help reduce the user's carbon footprint</p>
                 </div>
                 <div class="project graphics">
-                    <img src="/dist/img/images.jpg">
+                    <img src="img/images.jpg">
                     <h3>Stylized Water Simulation</h3>
                     <p>Project for the Computer Graphics class in my Master's</p>
                 </div>
                 <div class="project game">
-                    <img src="/dist/img/images.jpg">
+                    <img src="img/images.jpg">
                     <h3>Roll The Credits</h3>
                     <p>Project for my Game Design class in my Master's</p>
                     <a href="" target="_blank">
@@ -163,7 +168,7 @@
                     </a>
                 </div>
                 <div class="project game">
-                    <img src="/dist/img/images.jpg">
+                    <img src="img/images.jpg">
                     <h3>Pop To The Right</h3>
                     <p>Game made for the Global Game Jam 2025, theme: bubbles</p>
                     <a href="https://mrdummyacc-dot.itch.io/pop-to-the-right" target="_blank">
