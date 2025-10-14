@@ -386,6 +386,7 @@ body {
   cursor: pointer;
   border-radius: 8px;
   padding: 8px 12px;
+  opacity: 50%;
 }
 
 /* When screen is small, show hamburger and hide navbar initially */
