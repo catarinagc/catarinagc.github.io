@@ -7,6 +7,12 @@ var width = container.clientWidth;
 var height = window.innerHeight;
 const camera = new THREE.PerspectiveCamera(75, width / height, 0.6, 1200);
 const renderer = new THREE.WebGLRenderer();
+let useTouchInput = false;
+
+export function toggleTouchInput(){
+  useTouchInput = !useTouchInput;
+  return useTouchInput;
+}
 
 // Background color
 renderer.setClearColor("rgb(0, 0, 0)");
@@ -52,7 +58,7 @@ const visibleWidth = visibleHeight * camera.aspect;
 const mouse = new THREE.Vector2();
 var isMoving = false;
 
-// 🖱️ Handle both mouse + touch input
+// Handle both mouse + touch input
 function handlePointerMove(clientX, clientY) {
   isMoving = true;
   const rect = container.getBoundingClientRect();
@@ -78,8 +84,10 @@ window.addEventListener("mousemove", (event) => {
 
 // Touch events
 window.addEventListener("touchstart", (event) => {
-  const touch = event.touches[0];
-  if (touch) handlePointerMove(touch.clientX, touch.clientY);
+  if (useTouchInput){
+    const touch = event.touches[0];
+    if (touch) handlePointerMove(touch.clientX, touch.clientY);
+  }
 });
 
 window.addEventListener("touchmove", (event) => {
