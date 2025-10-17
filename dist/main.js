@@ -79,20 +79,22 @@ function handlePointerMove(clientX, clientY) {
 
 // Mouse events
 window.addEventListener("mousemove", (event) => {
-  handlePointerMove(event.clientX, event.clientY);
+  if (!useTouchInput) handlePointerMove(event.clientX, event.clientY);
 });
 
 // Touch events
 window.addEventListener("touchstart", (event) => {
-  if (useTouchInput){
+  if (useTouchInput) {
     const touch = event.touches[0];
     if (touch) handlePointerMove(touch.clientX, touch.clientY);
   }
 });
 
 window.addEventListener("touchmove", (event) => {
-  const touch = event.touches[0];
-  if (touch) handlePointerMove(touch.clientX, touch.clientY);
+  if (useTouchInput) {
+    const touch = event.touches[0];
+    if (touch) handlePointerMove(touch.clientX, touch.clientY);
+  }
 });
 
 window.addEventListener("touchend", () => {
