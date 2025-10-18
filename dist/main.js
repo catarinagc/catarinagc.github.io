@@ -101,10 +101,15 @@ window.addEventListener("touchend", () => {
   isMoving = false;
 });
 
-// Prevent page scroll while touching the canvas
-container.addEventListener("touchmove", (e) => e.preventDefault(), {
-  passive: false,
-});
+// Prevent page scroll only when touch input is active
+container.addEventListener(
+  "touchmove",
+  (e) => {
+    if (useTouchInput) e.preventDefault();
+  },
+  { passive: false }
+);
+
 
 // Convert screen to world position
 function getMousePositionInWorld() {
