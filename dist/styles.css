@@ -379,13 +379,12 @@ body {
 
 #interactButton {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 20px;
   background: black;
   color: white;
   border: white solid 1px;
-  /* font-size: 28px; */
   z-index: 1001;
   cursor: pointer;
   border-radius: 8px;
