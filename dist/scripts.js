@@ -31,3 +31,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+window.projButtonOnClick = projButtonOnClick;
