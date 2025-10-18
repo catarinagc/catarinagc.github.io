@@ -1,19 +1,35 @@
 import { toggleTouchInput } from './main.js';
 
 function projButtonOnClick(buttonClicked){
-    console.log(buttonClicked.id)
-    const allButtons = document.querySelectorAll("#projectsTab button");
-    allButtons.forEach(button => button.classList.remove("active-tab"));
-    buttonClicked.classList.add("active-tab");
-    console.log(buttonClicked.classList)
-    var projDiv = Array.from(document.getElementById("projectsDiv").children)
-    projDiv.forEach(project => {
-        if (!project.classList.contains(buttonClicked.id) && buttonClicked.id != "all" ){
-            project.style = "display:none"
-        } else
-            project.style -= "display:none"
-    });
+  const allButtons = document.querySelectorAll("#projectsTab button");
+  allButtons.forEach(button => {
+    if (button.id == buttonClicked.id)
+      button.classList.add("active-tab");
+    else
+      button.classList.remove("active-tab")
+  });
+  
+  const select = document.getElementById("projectsTabSel");
+  select.value = buttonClicked.id;
+
+  var projDiv = Array.from(document.getElementById("projectsDiv").children)
+  projDiv.forEach(project => {
+      if (!project.classList.contains(buttonClicked.id) && buttonClicked.id != "all" ){
+          project.style = "display:none"
+      } else
+          project.style -= "display:none"
+  });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const select = document.getElementById("projectsTabSel");
+  if (select) {
+    select.addEventListener("change", (e) => {
+      const fakeButton = { id: e.target.value };
+      projButtonOnClick(fakeButton);
+    });
+  }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menuToggle");
@@ -31,3 +47,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+window.projButtonOnClick = projButtonOnClick;
