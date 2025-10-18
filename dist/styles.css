@@ -267,6 +267,10 @@ body {
   margin-top: 0px;
 }
 
+#projectsTabSel {
+  display: none;
+}
+
 .project {
   max-width: 30%;
   width: 30%;
@@ -314,6 +318,11 @@ body {
   color: var(--highlight-color);
   font-size: larger;
   height: 100%;
+}
+
+#projectsTabSel {
+  align-self: center;
+  margin-left: auto;
 }
 
 .active-tab {
@@ -390,6 +399,16 @@ body {
     max-width: 30vw;
     width: 30vw;
     height: 100vh;
+  }
+}
+
+@media (max-width: 750px) {
+  #projectsTab {
+    display: none;
+  }
+
+  #projectsTabSel {
+    display: block;
   }
 }
 
