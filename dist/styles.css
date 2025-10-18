@@ -406,7 +406,7 @@ body {
   #projectsTab {
     display: none;
   }
-
+  
   #projectsTabSel {
     display: block;
   }
@@ -439,5 +439,10 @@ body {
 
   #extra-info > div {
     width: 100%;
+  }
+
+  #projectsTabSel {
+    display: block;
+    margin-right: -40px;
   }
 }
