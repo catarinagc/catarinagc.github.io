@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   menuToggle.addEventListener("click", () => {
     navBar.classList.toggle("active");
+    document.addEventListener("click",handleOutsideClick);
   });
 
   const interactButton = document.getElementById("interactButton");
@@ -47,5 +48,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+function handleOutsideClick(event) {
+  const menuToggle = document.getElementById("menuToggle");
+  const navBar = document.getElementById("navBar");
+  if (!navBar.contains(event.target) && !menuToggle.contains(event.target)) {
+    navBar.classList.remove("active");
+    document.removeEventListener("click", handleOutsideClick);
+  }
+}
 
 window.projButtonOnClick = projButtonOnClick;
