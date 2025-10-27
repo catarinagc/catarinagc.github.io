@@ -73,9 +73,8 @@ body {
 }
 
 .cv-button {
-  display: block;                       
-  background-color: var(--highlight-color);
-  color: black !important;             
+  border: var(--highlight-color) 2px solid;
+  color: white !important;          
   text-decoration: none;    
   padding: 0.6em 0.6em; 
   border-radius: 5px;
@@ -84,11 +83,11 @@ body {
   text-align: center;
   font-weight: 200;
   margin: 1em auto;
-  transition: background-color 0.3s ease-in-out !important;
+  transition: border 0.3s ease-in-out !important;
 }
 
 .cv-button:hover{
-  background-color: #d9b3e6;
+  border: #d9b3e6 2px solid;
 }
 
 #navBar a:hover {
