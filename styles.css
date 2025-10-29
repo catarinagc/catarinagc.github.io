@@ -5,7 +5,7 @@
   --muted-text: #8b949e;
   --accent-color: #58a6ff;
   --border-color: #30363d;
-  --highlight-color: #2987f1;
+  --highlight-color: #94bdec;
 }
 
 html{
@@ -67,13 +67,13 @@ p {
 }
 
 #navBar a {
-  color: var(--highlight-color);
+  color: var(--accent-color);
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
 
 .cv-button {
-  border: var(--highlight-color) 2px solid;
+  border: var(--accent-color) 2px solid;
   color: white !important;          
   text-decoration: none;    
   padding: 0.6em 0.6em; 
@@ -87,11 +87,11 @@ p {
 }
 
 .cv-button:hover{
-  border: #d9b3e6 2px solid;
+  border: var(--highlight-color) 2px solid;
 }
 
 #navBar a:hover {
-  color: #d9b3e6;
+  color: var(--highlight-color);
 }
 
 #navBar p {
@@ -142,6 +142,7 @@ p {
 #tabsDiv ul {
   margin-top: 0px;
   padding: 10px;
+  list-style-type: none;
 }
 
 #tabsDiv li {
@@ -163,7 +164,6 @@ p {
 #home {
   position: relative;
   height: 100vh;
-  width: 100%;
   overflow: hidden;
   background: radial-gradient(circle at 50% 30%, #161b22 0%, #0d1117 80%);
 }
@@ -206,9 +206,7 @@ p {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  padding-bottom: 5px;
-  border: 0px;
-  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
 }
 
 #aboutMe h1, #aboutMe h2 {
@@ -302,11 +300,22 @@ p {
 
 #projectsTabSel {
   display: none;
-}
-
-#projectsTabSel {
   align-self: center;
   margin-left: auto;
+  border: 1.5px solid var(--accent-color);
+  background-color: #161b22;
+  color: var(--text-color);
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  padding-left: 0px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#projectsTabSel:focus {
+  border-color: #79b8ff;
+  outline: none;
 }
 
 #projectsTab {
@@ -345,12 +354,10 @@ p {
   padding: 1rem;
   flex: 1 1 30%;
   min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.project:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .project img {
@@ -368,6 +375,13 @@ p {
   color: var(--muted-text);
   font-size: 0.95rem;
   line-height: 1.5;
+  flex-grow: 1;
+}
+
+.project a {
+  text-decoration: none;
+  align-self: flex-start;
+  margin-top: auto;
 }
 
 .project button {
@@ -378,12 +392,14 @@ p {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s ease;
+  width: 100%;
 }
 
 .project button:hover {
   background-color: var(--accent-color);
   color: #0d1117;
 }
+
 
 #footer {
   text-align: center;
@@ -471,11 +487,7 @@ p {
   }
 }
 
-@media (max-width: 500px) {
-  #tabsDiv {
-    padding-left: 0px;
-  }
-
+@media (max-width: 700px) {
   .project {
     max-width: 80%;
     width: 80%;
@@ -499,6 +511,15 @@ p {
   #extra-info > div {
     width: 100%;
   }
+}
+
+@media (max-width: 500px) {
+  .cv-button{
+    border: none;
+  }
+  #tabsDiv {
+    padding-left: 0px;
+  }
 
   #projectsTabSel {
     display: block;
@@ -507,13 +528,12 @@ p {
 
   #tabsDiv ul li i{
     display: none;
-  } 
-
-  #tabsDiv ul li::before {
-    content: "•";
-    color: white;
-    margin-right: 8px;
-    font-size: 1.0em;
-    vertical-align: middle;
   }
 }
+
+@media (max-width: 400px) {
+  #tabsDiv ul li {
+    font-size: medium;
+  }
+}
+
