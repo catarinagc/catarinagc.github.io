@@ -44,9 +44,9 @@ function resizeRendererToDisplaySize() {
 
 // Geometry + materials
 const sphereGeometry = new THREE.CircleGeometry(1, 100);
-const material1 = new THREE.MeshBasicMaterial({ color: "rgb(132, 92, 206)" });
-const material2 = new THREE.MeshBasicMaterial({ color: "rgb(235, 234, 176)" });
-const material3 = new THREE.MeshBasicMaterial({ color: "rgb(216, 149, 177)" });
+const material1 = new THREE.MeshBasicMaterial({ color: "#58a6ff" });
+const material2 = new THREE.MeshBasicMaterial({ color: "rgba(187, 228, 240, 1)" });
+const material3 = new THREE.MeshBasicMaterial({ color: "#166bccff" });
 var materialArray = [material1, material2, material3];
 
 const fov = camera.fov * (Math.PI / 180);
