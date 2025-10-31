@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
-    <script type="module" src="scripts.js"></script>
+    <script type="module" src="../scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="projects.css">
     <title>Document</title>
 </head>
-<body>
+<body>   
+    <button id="menuToggle" class="hamburger">
+        <i class="fa fa-bars"></i>
+    </button>
     <div id="navBar">
         <img src="../img/profile_foto.jfif" style="width: 70%; border-radius: 50%;">
         <h3 style="color: white; font-size: x-large; margin: 10px; align-self: center;">Catarina Costa</h3>
@@ -37,16 +40,21 @@
         </a>
     </div>
     <div id="mainZone">
-        <h1>Distribution Ray Tracer</h1>
-        <img>
+        <h1>CPU/GPU Ray Tracer</h1>
+        <img src="../img/p3d.png">
         <h2>Details:</h2>
-        <p>This were two project done for my Master's course 3D Programming</p>
+        <p>This were two project done for my Master's course 3D Programming.
+            The first one is CPU Ray Tracer and the second a GPU Ray Tracer</p>
         <h3>Source Code:</h3>
         <a href="https://github.com/rita-mota/DistributionRayTracer" target="_blank">https://github.com/rita-mota/DistributionRayTracer</a>
         <h2>Description:</h2>
+        <ul>
+            <li>CPU ray tracer: for this project we implemented a ray tracer that uses the cpu, stochastic sampling techiques, and acceleration structures</li>
+            <li>GPU ray tracer: for this project we implemented a GPU Progressive Path Tracer with motion blur, depth-of-field, and GGX Microfacets BRDF</li>
+        </ul>
         <h2>Learn More:</h2>
-        <a href="/CatarinaCosta_CV_EN.pdf" target="_blank">Project Reports 1</a>
-        <a href="/CatarinaCosta_CV_EN.pdf" target="_blank">Project Reports 2</a>
+        <a href="/assignment1.pdf" target="_blank">Project 1 Report</a>
+        <a href="/assignment2.pdf" target="_blank">Project 2 Report</a>
     </div>
 </body>
 </html>

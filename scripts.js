@@ -1,4 +1,4 @@
-import { toggleTouchInput } from './main.js';
+// import { toggleTouchInput } from './main.js';
 
 function projButtonOnClick(buttonClicked){
   const allButtons = document.querySelectorAll("#projectsTab button");
@@ -37,17 +37,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   menuToggle.addEventListener("click", () => {
     navBar.classList.toggle("active");
-    document.addEventListener("click",handleOutsideClick);
+    document.addEventListener("click", handleOutsideClick);
   });
 
   const interactButton = document.getElementById("interactButton");
 
-  interactButton.addEventListener("click", () => {
-    let interactable = toggleTouchInput();
-    interactButton.innerText = interactable ? "Stop Interact" : "Interact";
-  });
-
+  if (interactButton) {
+    interactButton.addEventListener("click", () => {
+      let interactable = window.toggleTouchInput();
+      interactButton.innerText = interactable ? "Stop Interact" : "Interact";
+    });
+  }
 });
+
 
 function handleOutsideClick(event) {
   const menuToggle = document.getElementById("menuToggle");

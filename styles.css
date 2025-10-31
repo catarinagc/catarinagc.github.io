@@ -347,7 +347,7 @@ p {
   padding-bottom: 1.5rem;
 }
 
-.project {
+/* .project {
   background-color: #161b22;
   border: 1px solid var(--border-color);
   border-radius: 10px;
@@ -358,12 +358,64 @@ p {
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+} */
+
+/* Make image-less project cards visually balanced */
+.project {
+  background-color: #161b22;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.2rem;
+  flex: 1 1 30%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Add a subtle placeholder space so cards align visually */
+.project:not(:has(img)) {
+  padding-top: 2rem;
+}
+
+/* Optional: you can also give image-less cards a subtle icon or color accent */
+.project:not(:has(img))::before {
+  content: "\f02d"; /* Font Awesome 'folder' icon */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: var(--muted-text);
+  align-self: center;
+  margin-bottom: 1rem;
+  opacity: 0.4;
+}
+
+.status-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #2ea043; /* green accent */
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
 }
 
 .project img {
-  width: 100%;
   border-radius: 6px;
   margin-bottom: 1rem;
+  width: 100%;
+  /* height: 43vh; */
+  /* width: 100%; */
+  /* object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  background-color: #1e232b; */
 }
 
 .project h3 {

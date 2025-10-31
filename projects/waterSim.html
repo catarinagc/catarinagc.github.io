@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
-    <script type="module" src="scripts.js"></script>
+    <script type="module" src="../scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="projects.css">
     <title>Document</title>
 </head>
 <body>
+    <button id="menuToggle" class="hamburger">
+        <i class="fa fa-bars"></i>
+    </button>
     <div id="navBar">
         <img src="../img/profile_foto.jfif" style="width: 70%; border-radius: 50%;">
         <h3 style="color: white; font-size: x-large; margin: 10px; align-self: center;">Catarina Costa</h3>
@@ -37,15 +40,20 @@
         </a>
     </div>
     <div id="mainZone">
-        <h1>Distribution Ray Tracer</h1>
-        <img>
+        <h1>Stylized Water Simulation</h1>
+        <img src="/img/cgj.PNG" alt="Screenshot 1">
         <h2>Details:</h2>
-        <p>This were two project done for my Master's course 3D Programming</p>
-        <h3>Source Code:</h3>
-        <a href="https://github.com/rita-mota/DistributionRayTracer" target="_blank">https://github.com/rita-mota/DistributionRayTracer</a>
+        <p>This was a project done for my Master's degree Computer Graphics for Games course</p>
+        <h2>Source Code:</h2>
+        <a href="https://github.com/catarinagc/CGJ_proj3" target="_blank">https://github.com/catarinagc/CGJ_proj3</a>
         <h2>Description:</h2>
+        <p>
+            For this project, I created a stylized 3D island surrounded by water. 
+            I used toon shading to give the island a cartoon-like look, and normal mapping to simulate waves on the water’s surface. 
+            I also experimented with reflections and refractions using a dynamic cubemap, but the final version uses a simpler approach after some technical challenges with that feature.
+        </p>
         <h2>Learn More:</h2>
-        <a href="/CatarinaCosta_CV_EN.pdf" target="_blank">Project Report</a>
+        <a href="/cgj_report.pdf" target="_blank">Project Report</a>
     </div>
 </body>
 </html>

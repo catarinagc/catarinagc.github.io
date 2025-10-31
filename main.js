@@ -170,3 +170,4 @@ function animate() {
 }
 
 renderer.setAnimationLoop(animate);
+window.toggleTouchInput = toggleTouchInput;
