@@ -13,14 +13,16 @@
           }
         }
     </script>
-  <script type="module" crossorigin src="/assets/index-BO05Dl_6.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-2QCLQBek.css">
+  <script type="module" crossorigin src="/assets/main-CZnh2MWK.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/styles-CMkn7DhC.js">
+  <link rel="stylesheet" crossorigin href="/assets/styles-DhfdF4qA.css">
 </head>
-<body>
+<body>
+    <!-- <script type="module" src="./main.js"></script> -->
     <button id="menuToggle" class="hamburger">
         <i class="fa fa-bars"></i>
     </button>
-    
+
     <div id="navBar">
         <img src="/assets/profile_foto-DwJD-rE0.jfif" style="width: 70%; border-radius: 50%;">
         <h3 style="color: white; font-size: x-large; margin: 10px; align-self: center;">Catarina Costa</h3>
@@ -45,16 +47,6 @@
                 <li><i class="fa fa-folder" style="font-size:20px; color: white;"></i><a href="#projects">Projects</a></li>
             </ul>
         </div>
-        <!-- <a href="CatarinaCosta_CV_PT.pdf" target="_blank" style="width: 70%; height: 4vh; padding-bottom: 8px;">
-            <button style="height: 100%; width: 100%; border-radius: 5px; cursor: pointer;">
-                Descarregar CV
-            </button>
-        </a> -->
-        <!-- <a href="CatarinaCosta_CV_EN.pdf" target="_blank" style="width: 70%; height: 4vh; ">
-            <button style="height: 100%; width: 100%;border-radius: 5px; cursor: pointer;" class="cv-button">
-                Download CV
-            </button>
-        </a>  -->
         <a href="/CatarinaCosta_CV_EN.pdf" target="_blank" class="cv-button">
             <i class="fa fa-file" style="font-size:20px; color: white; padding-right: 5px;"></i>Download CV
         </a>
@@ -63,14 +55,14 @@
         <div id="home">
             <button id="interactButton">Interact</button>
             <div id="homeText">
-                <h1 style="font-size: 800; font-weight: 700; color: rgb(202, 155, 234)">Catarina Costa</h1>
-                <h2 style="color:rgb(202, 155, 234)">Computer Science and Engineering Master's Student</h2>
+                <h1>Catarina Costa</h1>
+                <h2>Computer Science and Engineering Master's Student</h2>
             </div>
         </div>
         <div id="aboutMe">
             <div style="display: flex; flex-direction: column;">
                 <h1 style="margin-bottom: 0px;">About me</h1>
-                <p style="font-size: large; padding-right: 10px;">I'm a second-year Computer Science and Engineering Master's student at IST, specializing in Game Development and Computer Graphics. 
+                <p style="font-size: large; padding-right: 10px;">I'm a second-year Computer Science and Engineering Master's student at IST, specializing in Game Development and Computer Graphics.
                 I'm passionate about programming and love working on projects, building games, and participating in game jams.
                 Oustide of coding, I enjoy surfing, volleyball, and playing drums.
                 I'm always excited to learn new things and bring creative ideas to life with programming.</p>
@@ -84,7 +76,7 @@
                                 <div class="timeline-content">
                                     <h3>Master's in Computer Science and Engineering</h3>
                                     <p>2024-Now</p>
-                                    <p>Currently in my second year of the CS Master's course from Instituto Superior Técnico</p>
+                                    <p>Currently in my second year of the CS Master's degree from Instituto Superior Técnico</p>
                                     <p>Specializing in Games and Interaction/Visualization.</p>
                                 </div>
                                 <div class="timeline-content">
@@ -127,15 +119,6 @@
                             <h2>Languages</h2>
                             <p style="font-size: large;">Portuguese (Native) | English</p>
                         </div>
-                        <!-- <div style="display: flex; flex-direction: column;">
-                            <h2 style=" margin-bottom: 0px;">Hobbies</h2>
-                            <div style="display: flex; flex-direction: row;">
-                                <img src="img/console.png">
-                                <img src="img/man.png" style="height: 90%;">
-                                <img src="img/drums.png">
-                                <img src="img/voleyball.png" style="height: 90%;">
-                            </div>
-                        </div> -->
                     </div>
                     <div>
                         <h2>Tech Stack</h2>
@@ -162,30 +145,78 @@
             </div>
             <div id="projectsDiv">
                 <div class="project other">
-                    <img src="/assets/images-CByqxgDk.jpg">
+                    <img src="/assets/travelGreen-BmHZSvns.png">
                     <h3>TravelGreen</h3>
-                    <p>Final project for my Bachelor's degree, app and website made to help reduce the user's carbon footprint</p>
+                    <p>
+                        Final project for my Bachelor's degree, app and website made to help reduce the user's carbon footprint.
+                        The platform aimed to promote eco-friendly commuting by connecting university students who shared similar travel routes.
+                        Our app integrated features such as user ratings, secure authentication and a reporting system.
+                    </p>
                 </div>
                 <div class="project graphics">
-                    <img src="/assets/images-CByqxgDk.jpg">
+                    <img src="/assets/cgj-C021tLpN.PNG">
                     <h3>Stylized Water Simulation</h3>
-                    <p>Project for the Computer Graphics class in my Master's</p>
-                </div>
-                <div class="project game">
-                    <img src="/assets/images-CByqxgDk.jpg">
-                    <h3>Roll The Credits</h3>
-                    <p>Project for my Game Design class in my Master's</p>
-                    <a href="" target="_blank">
-                        <button>Play the game</button>
+                    <p>Project for the Computer Graphics for Games class in my Master's degree</p>
+                    <a href="/projects/waterSim.html">
+                        <button>Learn More</button>
                     </a>
                 </div>
                 <div class="project game">
-                    <img src="/assets/images-CByqxgDk.jpg">
+                    <img src="/assets/rollCredits-CWR-GUul.png">
+                    <h3>Roll The Credits</h3>
+                    <p>Project for my Game Design class in my Master's degree</p>
+                    <a href="/projects/rollCredits.html">
+                        <button>Learn More</button>
+                    </a>
+                </div>
+                <div class="project game">
+                    <img src="/assets/pop-CWsabCa1.png" style="height: 36vh; object-fit: cover; object-position: center;">
                     <h3>Pop To The Right</h3>
                     <p>Game made for the Global Game Jam 2025, theme: bubbles</p>
                     <a href="https://mrdummyacc-dot.itch.io/pop-to-the-right" target="_blank">
                         <button>Play the game</button>
                     </a>
+                </div>
+                <div class="project graphics">
+                    <img src="/assets/p3d-6Gn447b0.png" style="height: 43vh; object-fit: cover; object-position: center;">
+                    <h3>CPU/GPU Ray Tracer</h3>
+                    <p>Projects made for my Master's degree course 3D Programming</p>
+                    <a href="/projects/rayTracer.html">
+                        <button>Learn More</button>
+                    </a>
+                </div>
+                <div class="project other">
+                    <img src="/assets/vi_screenshot-CwHKFvtY.png">
+                    <h3>Streaming platforms Visualization</h3>
+                    <p>Dashboard fro visualizing streaming platforms data done for my Master's Information Visualization course</p>
+                    <a href="/projects/viDahsboard.html">
+                        <button>Learn More</button>
+                    </a>
+                </div>
+                <div class="project other">
+                    <h3>Thesis: OSOM-VR: Virtual Breakwater Exploration</h3>
+                    <p>
+                    My thesis project that is being developed with INESC-ID and The Portuguese National Laboratory of Civil Engineering.
+                    </p>
+                    <a href="/projects/thesis.html">
+                        <button>Learn More</button>
+                    </a>
+                    <div class="status-badge">Ongoing</div>
+                </div>
+                <div class="project game">
+                    <h3>Escape: Unreal Engine Game</h3>
+                    <p>
+                        This game is being developed in Unreal Engine 5 by the student group GameDev Técnico.
+                        The Escape is a first-person maze survival game where players must navigate through a dark, dangerous dungeon and find the exit before time runs out.
+                        Each run introduces a character with unique traits that influence how they move, fight, and interact with the environment. 
+                        Players must interpret these traits through subtle, sound-based feedback to adapt and survive.
+                    </p>
+                    <div class="status-badge">Ongoing</div>
+                </div>
+                <div class="project other">
+                    <h3>This website!</h3>
+                    <p>This portfolio website was made using HTML, CSS and JS, with Three.js for the main page</p>
+                    <div class="status-badge">Ongoing</div>
                 </div>
             </div>
         </div>
